@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		789ABB592732E88A00FFD496 /* Raymarching.metal in Sources */ = {isa = PBXBuildFile; fileRef = 789ABB582732E88A00FFD496 /* Raymarching.metal */; };
+		789ABB5A2732E88A00FFD496 /* Raymarching.metal in Sources */ = {isa = PBXBuildFile; fileRef = 789ABB582732E88A00FFD496 /* Raymarching.metal */; };
 		78AFBA1827306E39009B501C /* MetalUI in Frameworks */ = {isa = PBXBuildFile; productRef = 78AFBA1727306E39009B501C /* MetalUI */; };
 		78AFBA1A27306E7E009B501C /* MetalUI in Frameworks */ = {isa = PBXBuildFile; productRef = 78AFBA1927306E7E009B501C /* MetalUI */; };
 		78AFBA1C27306EDC009B501C /* BasicMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFBA1B27306EDC009B501C /* BasicMetalView.swift */; };
@@ -25,6 +27,10 @@
 		78C0383027306979005EB306 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C0380627306977005EB306 /* ContentView.swift */; };
 		78C0383127306979005EB306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C0380727306979005EB306 /* Assets.xcassets */; };
 		78C0383227306979005EB306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C0380727306979005EB306 /* Assets.xcassets */; };
+		78E3C8B527318EED00BD7277 /* RaymarchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3C8B427318EED00BD7277 /* RaymarchingView.swift */; };
+		78E3C8B627318EED00BD7277 /* RaymarchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3C8B427318EED00BD7277 /* RaymarchingView.swift */; };
+		78E3C8B827318FF700BD7277 /* RaymarchingRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3C8B727318FF700BD7277 /* RaymarchingRenderer.swift */; };
+		78E3C8B927318FF700BD7277 /* RaymarchingRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3C8B727318FF700BD7277 /* RaymarchingRenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		789ABB582732E88A00FFD496 /* Raymarching.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Raymarching.metal; sourceTree = "<group>"; };
 		78AFBA1B27306EDC009B501C /* BasicMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMetalView.swift; sourceTree = "<group>"; };
 		78AFBA1E27307230009B501C /* BasicMetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMetalRenderer.swift; sourceTree = "<group>"; };
 		78AFBA2127307917009B501C /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
@@ -60,6 +67,8 @@
 		78C0382527306979005EB306 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C0382927306979005EB306 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		78C0382B27306979005EB306 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		78E3C8B427318EED00BD7277 /* RaymarchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaymarchingView.swift; sourceTree = "<group>"; };
+		78E3C8B727318FF700BD7277 /* RaymarchingRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RaymarchingRenderer.swift; path = Shared/RaymarchingRenderer.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +127,15 @@
 		78C0380427306977005EB306 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				789ABB582732E88A00FFD496 /* Raymarching.metal */,
 				78C0380527306977005EB306 /* BasicMetalExampleApp.swift */,
 				78C0380627306977005EB306 /* ContentView.swift */,
 				78C0380727306979005EB306 /* Assets.xcassets */,
 				78AFBA1B27306EDC009B501C /* BasicMetalView.swift */,
 				78AFBA1E27307230009B501C /* BasicMetalRenderer.swift */,
 				78AFBA2127307917009B501C /* Shaders.metal */,
+				78E3C8B427318EED00BD7277 /* RaymarchingView.swift */,
+				78E3C8B727318FF700BD7277 /* RaymarchingRenderer.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -334,9 +346,12 @@
 			files = (
 				78AFBA1C27306EDC009B501C /* BasicMetalView.swift in Sources */,
 				78C0382F27306979005EB306 /* ContentView.swift in Sources */,
+				78E3C8B827318FF700BD7277 /* RaymarchingRenderer.swift in Sources */,
 				78C0382D27306979005EB306 /* BasicMetalExampleApp.swift in Sources */,
 				78AFBA1F27307230009B501C /* BasicMetalRenderer.swift in Sources */,
+				78E3C8B527318EED00BD7277 /* RaymarchingView.swift in Sources */,
 				78AFBA2227307917009B501C /* Shaders.metal in Sources */,
+				789ABB592732E88A00FFD496 /* Raymarching.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,9 +361,12 @@
 			files = (
 				78AFBA1D27306EDC009B501C /* BasicMetalView.swift in Sources */,
 				78C0383027306979005EB306 /* ContentView.swift in Sources */,
+				78E3C8B927318FF700BD7277 /* RaymarchingRenderer.swift in Sources */,
 				78C0382E27306979005EB306 /* BasicMetalExampleApp.swift in Sources */,
 				78AFBA2027307230009B501C /* BasicMetalRenderer.swift in Sources */,
+				78E3C8B627318EED00BD7277 /* RaymarchingView.swift in Sources */,
 				78AFBA2327307917009B501C /* Shaders.metal in Sources */,
+				789ABB5A2732E88A00FFD496 /* Raymarching.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,13 @@ struct ContentView: View {
             MetalView{
                 BasicMetalView()
             }
+//            MetalView{
+//                RaymarchingView()
+                    
+//            }
+            .frame(width: 600, height: 600, alignment: .leading)
         }
+        
     }
 }
 

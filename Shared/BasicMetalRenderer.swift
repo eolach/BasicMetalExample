@@ -58,7 +58,9 @@ final class BasicMetalRenderer: NSObject, MetalRendering {
         let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
         commandEncoder?.setRenderPipelineState(renderPipleState)
         commandEncoder?.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-        commandEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: vertices.count)
+        commandEncoder?.drawPrimitives(type: .triangle,
+                                       vertexStart: 0,
+                                       vertexCount: vertices.count)
         
         commandEncoder?.endEncoding()
         commandBuffer?.present(drawable)
